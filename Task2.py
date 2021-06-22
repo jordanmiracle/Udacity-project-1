@@ -19,7 +19,12 @@ Print a message:
 "<telephone number> spent the longest time, <total time> seconds, on the phone during 
 September 2016.".
 """
+
 call_list = []
-for i in range (len(calls)):
-    call_list.append(int(calls[i][-1]))
-print(max(call_list))
+def callList():
+    for i in range (len(calls)):
+        call_list.append(int(calls[i][-1]))
+    print(max(call_list))
+
+
+callList()

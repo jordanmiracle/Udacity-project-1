@@ -1,0 +1,19 @@
+Task0:
+    Time Complexity: O(1)
+    Description: This task only needs access to a specific value in an array. So, no matter the size of the input, it only executes one line.
+
+Task1:
+    Time Complexity:O(n)
+    Description: The time complexity for this task seems to be O(n) due to the fact the we are simply iterating over a set. This is implemented as a hash table. This means one can expect, generally, lookup,insert,delete. This is usually O(1) on average, but we are iterating over the whole thing here. So, O(n).
+
+Task2:
+    Time Complexity: O(n)
+    Description: Again, we are looking at a list, implemented as an array. We are making a simple call to look up and the solution is proportional to the input size.
+
+Task3:
+    Time Complexity: O(nlogn)
+    Description: We are running 1 loop for calls, and then all calls again, and the a sorted function, and then another loop for calls.
+
+Task4:
+    Time Complexity:O(n^2)
+    Description: Getting texting numbers, getting call receivers, getting marketers, sorted function at the end, all leads to O(3n + nlogn) -> O(n^2)

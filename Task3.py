@@ -45,14 +45,17 @@ Print the answer as a part of a message::
 to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
 """
-call_list = [item for sublist in calls for item in sublist]
-bangalist = []
-for i in call_list:
-  if i[1:4] == '080':
-    bangalist.append(i)
-print(bangalist)
+called_from_bangalore = [call[1] for call in calls if call[0][:5] == '(080)']
+area_codes = [phone[:phone.find(')') + 1].replace('(', '').replace(')', '') if ')' in phone else phone[0:4] for phone in called_from_bangalore]
 
 
+print('The numbers called by people in Bangalore have codes:\n' + '\n'.join(sorted(set(area_codes))))
+
+# PART B
+print()
+print('{0:.2f}'.format(
+    (len([phone for phone in called_from_bangalore if '(080)' in phone]) / len(called_from_bangalore)) * 100),
+    'percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.')
 
 
 
